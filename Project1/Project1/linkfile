@@ -1,7 +1,0 @@
--F0x30 -g -blit:0x1a0.0x7fff 
- -bdata:0.0x6ff -bSSCParmBlk:0x00F7.0x00FF -BInterruptRAM:0 -Bvirtual_registers  
- -Bproject1_RAM   
- -Bproject1_RAM 
- -o"output/Project1" 
- ./obj/main.o   
- C:/Users/Anurag/Desktop/Project1/Project1/Project1/lib/libPSoc.a -LC:/PROGRA~1/Cypress/Common/CY3E64~1/tools/lib/LMM/eightpages C:/PROGRA~1/Cypress/Common/CY3E64~1/tools/lib/CY8C29000/cms.a C:/PROGRA~1/Cypress/Common/CY3E64~1/tools/lib/LMM/UASW/MAC/arith.a 
