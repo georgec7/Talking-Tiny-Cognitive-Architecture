@@ -1,0 +1,27 @@
+# DO NOT DELETE
+./obj/boot.o : \
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CYPRES~1/tools/include/CY8C28~1/m8c.inc\
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CYPRES~1/tools/include/CY8C28~1/m8ssc.inc\
+   C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\lib\GLOBAL~1.INC\
+   C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\memory.inc
+./obj/main.o :  ./lib/I2CHW_~2.H ./lib/I2CHW_~1.H ./lib/PSoCAPI.h\
+   ./lib/PSOCGP~1.H\
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CYPRES~1/tools/include/CY8C28~1/m8c.h
+./lib/obj/i2chw_tempcommon.o :  ./lib/I2CHW_~1.INC\
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CYPRES~1/tools/include/CY8C28~1/m8c.inc\
+   C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\memory.inc
+./lib/obj/i2chw_tempint.o :  ./lib/I2CHW_~1.INC ./lib/I2CHW_~2.INC\
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CYPRES~1/tools/include/CY8C28~1/m8c.inc\
+   C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\memory.inc
+./lib/obj/i2chw_tempmstr.o :  ./lib/I2CHW_~1.INC ./lib/I2CHW_~2.INC\
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CYPRES~1/tools/include/CY8C28~1/m8c.inc\
+   C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\memory.inc
+./lib/obj/i2chw_temprsrcinits.o :  ./lib/I2CHW_~1.INC ./lib/I2CHW_~2.INC\
+   ./lib/PSoCAPI.inc ./lib/PSOCGP~1.INC\
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CYPRES~1/tools/include/CY8C28~1/m8c.inc\
+   C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\memory.inc
+./lib/obj/psocconfig.o :  ./lib/GLOBAL~1.INC\
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CYPRES~1/tools/include/CY8C28~1/m8c.inc\
+   C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\memory.inc
+./lib/obj/psocconfigtbl.o : \
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CYPRES~1/tools/include/CY8C28~1/m8c.inc

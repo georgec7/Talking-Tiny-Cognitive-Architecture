@@ -1,0 +1,257 @@
+ 0000                   cpu LMM
+                        .module main.c
+                        .area text(rom, con, rel)
+ 0000                   .dbfile ./main.c
+ 0000                   .dbfile C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c
+ 0000                   .dbfunc e main _main fV
+ 0000           _main::
+ 0000                   .dbline -1
+ 0000                   .dbline 19
+ 0000           ; //----------------------------------------------------------------------------
+ 0000           ; // C main line
+ 0000           ; //----------------------------------------------------------------------------
+ 0000           ; 
+ 0000           ; #include <m8c.h>        // part specific constants and macros
+ 0000           ; #include "PSoCAPI.h"    // PSoC API definitions for all User Modules
+ 0000           ; 
+ 0000           ; #define ADDRESS_TEMP_SENSOR 0x18
+ 0000           ; #define READ_BYTE                     0x01
+ 0000           ; #define WRITE_BYTE          0x00
+ 0000           ; #define TEMP_REG              0x05
+ 0000           ; 
+ 0000           ; // Function prototype
+ 0000           ; void read_temp_and_print(void);
+ 0000           ; 
+ 0000           ; 
+ 0000           ; 
+ 0000           ; void main(void)
+ 0000           ; {
+ 0000 8003              xjmp L3
+ 0002           L2:
+ 0002                   .dbline 24
+ 0002           ;       // M8C_EnableGInt ; // Uncomment this line to enable Global Interrupts
+ 0002           ;       // Insert your main routine code here.
+ 0002           ;       
+ 0002           ;       while (1)
+ 0002           ;       {
+ 0002                   .dbline 25
+ 0002           ;               read_temp_and_print();  
+ 0002 9004              xcall _read_temp_and_print
+ 0004                   .dbline 26
+ 0004           ;       }
+ 0004           L3:
+ 0004                   .dbline 23
+ 0004 8FFD              xjmp L2
+ 0006           X0:
+ 0006                   .dbline -2
+ 0006           L1:
+ 0006                   .dbline 0 ; func end
+ 0006 8FFF              jmp .
+ 0008                   .dbend
+ 0008                   .dbfunc e read_temp_and_print _read_temp_and_print fV
+ 0008           ;    Temperature -> X+2
+ 0008           ;      LowerByte -> X+1
+ 0008           ;      UpperByte -> X+0
+ 0008           _read_temp_and_print::
+ 0008                   .dbline -1
+ 0008 10                push X
+ 0009 4F                mov X,SP
+ 000A 3804              add SP,4
+ 000C                   .dbline 30
+ 000C           ; }
+ 000C           ; 
+ 000C           ; void read_temp_and_print(void)
+ 000C           ; {
+ 000C                   .dbline 34
+ 000C           ;       BYTE UpperByte,LowerByte;
+ 000C           ;       INT Temperature;
+ 000C           ;       
+ 000C           ;       I2CHW_Temp_fSendStart(ADDRESS_TEMP_SENSOR, I2CHW_Temp_WRITE);
+ 000C 10                push X
+ 000D 5700              mov X,0
+ 000F 5018              mov A,24
+ 0011 7C0000            xcall _I2CHW_Temp_fSendStart
+ 0014 20                pop X
+ 0015 62D000            mov REG[0xd0],>__r0
+ 0018                   .dbline 35
+ 0018           ;       I2CHW_Temp_fWrite(TEMP_REG);
+ 0018 10                push X
+ 0019 5005              mov A,5
+ 001B 7C0000            xcall _I2CHW_Temp_fWrite
+ 001E 20                pop X
+ 001F 62D000            mov REG[0xd0],>__r0
+ 0022                   .dbline 36
+ 0022           ;       I2CHW_Temp_SendStop();
+ 0022 10                push X
+ 0023 7C0000            xcall _I2CHW_Temp_SendStop
+ 0026                   .dbline 38
+ 0026           ;       
+ 0026           ;       I2CHW_Temp_fSendStart(ADDRESS_TEMP_SENSOR, I2CHW_Temp_READ);
+ 0026 5701              mov X,1
+ 0028 5018              mov A,24
+ 002A 7C0000            xcall _I2CHW_Temp_fSendStart
+ 002D 20                pop X
+ 002E 62D000            mov REG[0xd0],>__r0
+ 0031                   .dbline 39
+ 0031           ;       UpperByte = I2CHW_Temp_bRead(I2CHW_Temp_ACKslave);
+ 0031 10                push X
+ 0032 5001              mov A,1
+ 0034 7C0000            xcall _I2CHW_Temp_bRead
+ 0037 20                pop X
+ 0038 62D000            mov REG[0xd0],>__r0
+ 003B 5400              mov [X+0],A
+ 003D                   .dbline 40
+ 003D           ;       LowerByte = I2CHW_Temp_bRead(I2CHW_Temp_NAKslave);
+ 003D 10                push X
+ 003E 5000              mov A,0
+ 0040 7C0000            xcall _I2CHW_Temp_bRead
+ 0043 20                pop X
+ 0044 62D000            mov REG[0xd0],>__r0
+ 0047 5401              mov [X+1],A
+ 0049                   .dbline 41
+ 0049           ;       I2CHW_Temp_SendStop();
+ 0049 10                push X
+ 004A 7C0000            xcall _I2CHW_Temp_SendStop
+ 004D 20                pop X
+ 004E                   .dbline 44
+ 004E           ;       
+ 004E           ;       //First Check flag bits
+ 004E           ;       if ((UpperByte & 0x80) == 0x80){ //TA ≥ TCRIT
+ 004E 62D000            mov REG[0xd0],>__r0
+ 0051 5200              mov A,[X+0]
+ 0053 2180              and A,-128
+ 0055 3980              cmp A,-128
+ 0057 B001              jnz L6
+ 0059                   .dbline 45
+ 0059           ;       }
+ 0059                   .dbline 45
+ 0059           L6:
+ 0059                   .dbline 46
+ 0059           ;       if ((UpperByte & 0x40) == 0x40){ //TA > TUPPER
+ 0059 62D000            mov REG[0xd0],>__r0
+ 005C 5200              mov A,[X+0]
+ 005E 2140              and A,64
+ 0060 3940              cmp A,64
+ 0062 B001              jnz L8
+ 0064                   .dbline 47
+ 0064           ;       }
+ 0064                   .dbline 47
+ 0064           L8:
+ 0064                   .dbline 48
+ 0064           ;       if ((UpperByte & 0x20) == 0x20){ //TA < TLOWER
+ 0064 62D000            mov REG[0xd0],>__r0
+ 0067 5200              mov A,[X+0]
+ 0069 2120              and A,32
+ 006B 3920              cmp A,32
+ 006D B001              jnz L10
+ 006F                   .dbline 49
+ 006F           ;       }
+ 006F                   .dbline 49
+ 006F           L10:
+ 006F                   .dbline 50
+ 006F           ;       UpperByte = UpperByte & 0x1F; //Clear flag bits
+ 006F 27001F            and [X+0],31
+ 0072                   .dbline 51
+ 0072           ;       if ((UpperByte & 0x10) == 0x10){ //TA < 0°C
+ 0072 62D000            mov REG[0xd0],>__r0
+ 0075 5200              mov A,[X+0]
+ 0077 2110              and A,16
+ 0079 3910              cmp A,16
+ 007B B050              jnz L12
+ 007D                   .dbline 52
+ 007D           ;       UpperByte = UpperByte & 0x0F;//Clear SIGN
+ 007D                   .dbline 52
+ 007D 27000F            and [X+0],15
+ 0080                   .dbline 53
+ 0080           ;       Temperature = 256 - (UpperByte * 16 + LowerByte / 16);
+ 0080 5201              mov A,[X+1]
+ 0082 5300              mov [__r1],A
+ 0084 5000              mov A,0
+ 0086 08                push A
+ 0087 5010              mov A,16
+ 0089 08                push A
+ 008A 5000              mov A,0
+ 008C 08                push A
+ 008D 5100              mov A,[__r1]
+ 008F 08                push A
+ 0090 7C0000            xcall __divmod_16X16_16
+ 0093 18                pop A
+ 0094 5300              mov [__r1],A
+ 0096 18                pop A
+ 0097 5300              mov [__r0],A
+ 0099 38FE              add SP,-2
+ 009B 5200              mov A,[X+0]
+ 009D 5300              mov [__r3],A
+ 009F 550000            mov [__r2],0
+ 00A2 6500              asl [__r3]
+ 00A4 6B00              rlc [__r2]
+ 00A6 6500              asl [__r3]
+ 00A8 6B00              rlc [__r2]
+ 00AA 6500              asl [__r3]
+ 00AC 6B00              rlc [__r2]
+ 00AE 6500              asl [__r3]
+ 00B0 6B00              rlc [__r2]
+ 00B2 5100              mov A,[__r3]
+ 00B4 0200              add A,[__r1]
+ 00B6 5300              mov [__r1],A
+ 00B8 5100              mov A,[__r2]
+ 00BA 0A00              adc A,[__r0]
+ 00BC 5300              mov [__r0],A
+ 00BE 5000              mov A,0
+ 00C0 1200              sub A,[__r1]
+ 00C2 5403              mov [X+3],A
+ 00C4 5001              mov A,1
+ 00C6 1A00              sbb A,[__r0]
+ 00C8 5402              mov [X+2],A
+ 00CA                   .dbline 54
+ 00CA           ;       }else //TA ≥ 0°C
+ 00CA 8042              xjmp L13
+ 00CC           L12:
+ 00CC                   .dbline 56
+ 00CC           ;       
+ 00CC           ;       Temperature = (UpperByte * 16 + LowerByte / 16);//Temperature = Ambient Temperature (°C)
+ 00CC 62D000            mov REG[0xd0],>__r0
+ 00CF 5201              mov A,[X+1]
+ 00D1 5300              mov [__r1],A
+ 00D3 5000              mov A,0
+ 00D5 08                push A
+ 00D6 5010              mov A,16
+ 00D8 08                push A
+ 00D9 5000              mov A,0
+ 00DB 08                push A
+ 00DC 5100              mov A,[__r1]
+ 00DE 08                push A
+ 00DF 7C0000            xcall __divmod_16X16_16
+ 00E2 18                pop A
+ 00E3 5300              mov [__r1],A
+ 00E5 18                pop A
+ 00E6 5300              mov [__r0],A
+ 00E8 38FE              add SP,-2
+ 00EA 5200              mov A,[X+0]
+ 00EC 5300              mov [__r3],A
+ 00EE 550000            mov [__r2],0
+ 00F1 6500              asl [__r3]
+ 00F3 6B00              rlc [__r2]
+ 00F5 6500              asl [__r3]
+ 00F7 6B00              rlc [__r2]
+ 00F9 6500              asl [__r3]
+ 00FB 6B00              rlc [__r2]
+ 00FD 6500              asl [__r3]
+ 00FF 6B00              rlc [__r2]
+ 0101 5100              mov A,[__r3]
+ 0103 0200              add A,[__r1]
+ 0105 5403              mov [X+3],A
+ 0107 5100              mov A,[__r2]
+ 0109 0A00              adc A,[__r0]
+ 010B 5402              mov [X+2],A
+ 010D           L13:
+ 010D                   .dbline -2
+ 010D           L5:
+ 010D 38FC              add SP,-4
+ 010F 20                pop X
+ 0110                   .dbline 0 ; func end
+ 0110 7F                ret
+ 0111                   .dbsym l Temperature 2 I
+ 0111                   .dbsym l LowerByte 1 c
+ 0111                   .dbsym l UpperByte 0 c
+ 0111                   .dbend
