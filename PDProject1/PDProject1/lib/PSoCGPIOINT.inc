@@ -22,3 +22,479 @@ I2CHW_TempSCL_IntCtrl_1_ADDR:	equ	107h
 I2CHW_TempSCL_IntEn_ADDR:	equ	5h
 I2CHW_TempSCL_MASK:	equ	2h
 I2CHW_TempSCL_MUXBusCtrl_ADDR:	equ	1d9h
+; LCD_2D4 address and mask equates
+LCD_2D4_Data_ADDR:	equ	8h
+LCD_2D4_DriveMode_0_ADDR:	equ	108h
+LCD_2D4_DriveMode_1_ADDR:	equ	109h
+LCD_2D4_DriveMode_2_ADDR:	equ	bh
+LCD_2D4_GlobalSelect_ADDR:	equ	ah
+LCD_2D4_IntCtrl_0_ADDR:	equ	10ah
+LCD_2D4_IntCtrl_1_ADDR:	equ	10bh
+LCD_2D4_IntEn_ADDR:	equ	9h
+LCD_2D4_MASK:	equ	1h
+LCD_2D4_MUXBusCtrl_ADDR:	equ	1dah
+; LCD_2D4_Data access macros
+;   GetLCD_2D4_Data macro, return in a
+macro GetLCD_2D4_Data
+	mov		a,[Port_2_Data_SHADE]
+	and		a, 1h
+endm
+;   SetLCD_2D4_Data macro
+macro SetLCD_2D4_Data
+	or		[Port_2_Data_SHADE], 1h
+	mov		a, [Port_2_Data_SHADE]
+	mov		reg[LCD_2D4_Data_ADDR], a
+endm
+;   ClearLCD_2D4_Data macro
+macro ClearLCD_2D4_Data
+	and		[Port_2_Data_SHADE], ~1h
+	mov		a, [Port_2_Data_SHADE]
+	mov		reg[LCD_2D4_Data_ADDR], a
+endm
+
+; LCD_2D4_DriveMode_0 access macros
+;   GetLCD_2D4_DriveMode_0 macro, return in a
+macro GetLCD_2D4_DriveMode_0
+	mov		a,[Port_2_DriveMode_0_SHADE]
+	and		a, 1h
+endm
+;   SetLCD_2D4_DriveMode_0 macro
+macro SetLCD_2D4_DriveMode_0
+	or		[Port_2_DriveMode_0_SHADE], 1h
+	mov		a, [Port_2_DriveMode_0_SHADE]
+	mov		reg[LCD_2D4_Data_ADDR], a
+endm
+;   ClearLCD_2D4_DriveMode_0 macro
+macro ClearLCD_2D4_DriveMode_0
+	and		[Port_2_DriveMode_0_SHADE], ~1h
+	mov		a, [Port_2_DriveMode_0_SHADE]
+	mov		reg[LCD_2D4_Data_ADDR], a
+endm
+
+; LCD_2D4_DriveMode_1 access macros
+;   GetLCD_2D4_DriveMode_1 macro, return in a
+macro GetLCD_2D4_DriveMode_1
+	mov		a,[Port_2_DriveMode_1_SHADE]
+	and		a, 1h
+endm
+;   SetLCD_2D4_DriveMode_1 macro
+macro SetLCD_2D4_DriveMode_1
+	or		[Port_2_DriveMode_1_SHADE], 1h
+	mov		a, [Port_2_DriveMode_1_SHADE]
+	mov		reg[LCD_2D4_Data_ADDR], a
+endm
+;   ClearLCD_2D4_DriveMode_1 macro
+macro ClearLCD_2D4_DriveMode_1
+	and		[Port_2_DriveMode_1_SHADE], ~1h
+	mov		a, [Port_2_DriveMode_1_SHADE]
+	mov		reg[LCD_2D4_Data_ADDR], a
+endm
+
+; LCD_2D5 address and mask equates
+LCD_2D5_Data_ADDR:	equ	8h
+LCD_2D5_DriveMode_0_ADDR:	equ	108h
+LCD_2D5_DriveMode_1_ADDR:	equ	109h
+LCD_2D5_DriveMode_2_ADDR:	equ	bh
+LCD_2D5_GlobalSelect_ADDR:	equ	ah
+LCD_2D5_IntCtrl_0_ADDR:	equ	10ah
+LCD_2D5_IntCtrl_1_ADDR:	equ	10bh
+LCD_2D5_IntEn_ADDR:	equ	9h
+LCD_2D5_MASK:	equ	2h
+LCD_2D5_MUXBusCtrl_ADDR:	equ	1dah
+; LCD_2D5_Data access macros
+;   GetLCD_2D5_Data macro, return in a
+macro GetLCD_2D5_Data
+	mov		a,[Port_2_Data_SHADE]
+	and		a, 2h
+endm
+;   SetLCD_2D5_Data macro
+macro SetLCD_2D5_Data
+	or		[Port_2_Data_SHADE], 2h
+	mov		a, [Port_2_Data_SHADE]
+	mov		reg[LCD_2D5_Data_ADDR], a
+endm
+;   ClearLCD_2D5_Data macro
+macro ClearLCD_2D5_Data
+	and		[Port_2_Data_SHADE], ~2h
+	mov		a, [Port_2_Data_SHADE]
+	mov		reg[LCD_2D5_Data_ADDR], a
+endm
+
+; LCD_2D5_DriveMode_0 access macros
+;   GetLCD_2D5_DriveMode_0 macro, return in a
+macro GetLCD_2D5_DriveMode_0
+	mov		a,[Port_2_DriveMode_0_SHADE]
+	and		a, 2h
+endm
+;   SetLCD_2D5_DriveMode_0 macro
+macro SetLCD_2D5_DriveMode_0
+	or		[Port_2_DriveMode_0_SHADE], 2h
+	mov		a, [Port_2_DriveMode_0_SHADE]
+	mov		reg[LCD_2D5_Data_ADDR], a
+endm
+;   ClearLCD_2D5_DriveMode_0 macro
+macro ClearLCD_2D5_DriveMode_0
+	and		[Port_2_DriveMode_0_SHADE], ~2h
+	mov		a, [Port_2_DriveMode_0_SHADE]
+	mov		reg[LCD_2D5_Data_ADDR], a
+endm
+
+; LCD_2D5_DriveMode_1 access macros
+;   GetLCD_2D5_DriveMode_1 macro, return in a
+macro GetLCD_2D5_DriveMode_1
+	mov		a,[Port_2_DriveMode_1_SHADE]
+	and		a, 2h
+endm
+;   SetLCD_2D5_DriveMode_1 macro
+macro SetLCD_2D5_DriveMode_1
+	or		[Port_2_DriveMode_1_SHADE], 2h
+	mov		a, [Port_2_DriveMode_1_SHADE]
+	mov		reg[LCD_2D5_Data_ADDR], a
+endm
+;   ClearLCD_2D5_DriveMode_1 macro
+macro ClearLCD_2D5_DriveMode_1
+	and		[Port_2_DriveMode_1_SHADE], ~2h
+	mov		a, [Port_2_DriveMode_1_SHADE]
+	mov		reg[LCD_2D5_Data_ADDR], a
+endm
+
+; LCD_2D6 address and mask equates
+LCD_2D6_Data_ADDR:	equ	8h
+LCD_2D6_DriveMode_0_ADDR:	equ	108h
+LCD_2D6_DriveMode_1_ADDR:	equ	109h
+LCD_2D6_DriveMode_2_ADDR:	equ	bh
+LCD_2D6_GlobalSelect_ADDR:	equ	ah
+LCD_2D6_IntCtrl_0_ADDR:	equ	10ah
+LCD_2D6_IntCtrl_1_ADDR:	equ	10bh
+LCD_2D6_IntEn_ADDR:	equ	9h
+LCD_2D6_MASK:	equ	4h
+LCD_2D6_MUXBusCtrl_ADDR:	equ	1dah
+; LCD_2D6_Data access macros
+;   GetLCD_2D6_Data macro, return in a
+macro GetLCD_2D6_Data
+	mov		a,[Port_2_Data_SHADE]
+	and		a, 4h
+endm
+;   SetLCD_2D6_Data macro
+macro SetLCD_2D6_Data
+	or		[Port_2_Data_SHADE], 4h
+	mov		a, [Port_2_Data_SHADE]
+	mov		reg[LCD_2D6_Data_ADDR], a
+endm
+;   ClearLCD_2D6_Data macro
+macro ClearLCD_2D6_Data
+	and		[Port_2_Data_SHADE], ~4h
+	mov		a, [Port_2_Data_SHADE]
+	mov		reg[LCD_2D6_Data_ADDR], a
+endm
+
+; LCD_2D6_DriveMode_0 access macros
+;   GetLCD_2D6_DriveMode_0 macro, return in a
+macro GetLCD_2D6_DriveMode_0
+	mov		a,[Port_2_DriveMode_0_SHADE]
+	and		a, 4h
+endm
+;   SetLCD_2D6_DriveMode_0 macro
+macro SetLCD_2D6_DriveMode_0
+	or		[Port_2_DriveMode_0_SHADE], 4h
+	mov		a, [Port_2_DriveMode_0_SHADE]
+	mov		reg[LCD_2D6_Data_ADDR], a
+endm
+;   ClearLCD_2D6_DriveMode_0 macro
+macro ClearLCD_2D6_DriveMode_0
+	and		[Port_2_DriveMode_0_SHADE], ~4h
+	mov		a, [Port_2_DriveMode_0_SHADE]
+	mov		reg[LCD_2D6_Data_ADDR], a
+endm
+
+; LCD_2D6_DriveMode_1 access macros
+;   GetLCD_2D6_DriveMode_1 macro, return in a
+macro GetLCD_2D6_DriveMode_1
+	mov		a,[Port_2_DriveMode_1_SHADE]
+	and		a, 4h
+endm
+;   SetLCD_2D6_DriveMode_1 macro
+macro SetLCD_2D6_DriveMode_1
+	or		[Port_2_DriveMode_1_SHADE], 4h
+	mov		a, [Port_2_DriveMode_1_SHADE]
+	mov		reg[LCD_2D6_Data_ADDR], a
+endm
+;   ClearLCD_2D6_DriveMode_1 macro
+macro ClearLCD_2D6_DriveMode_1
+	and		[Port_2_DriveMode_1_SHADE], ~4h
+	mov		a, [Port_2_DriveMode_1_SHADE]
+	mov		reg[LCD_2D6_Data_ADDR], a
+endm
+
+; LCD_2D7 address and mask equates
+LCD_2D7_Data_ADDR:	equ	8h
+LCD_2D7_DriveMode_0_ADDR:	equ	108h
+LCD_2D7_DriveMode_1_ADDR:	equ	109h
+LCD_2D7_DriveMode_2_ADDR:	equ	bh
+LCD_2D7_GlobalSelect_ADDR:	equ	ah
+LCD_2D7_IntCtrl_0_ADDR:	equ	10ah
+LCD_2D7_IntCtrl_1_ADDR:	equ	10bh
+LCD_2D7_IntEn_ADDR:	equ	9h
+LCD_2D7_MASK:	equ	8h
+LCD_2D7_MUXBusCtrl_ADDR:	equ	1dah
+; LCD_2D7_Data access macros
+;   GetLCD_2D7_Data macro, return in a
+macro GetLCD_2D7_Data
+	mov		a,[Port_2_Data_SHADE]
+	and		a, 8h
+endm
+;   SetLCD_2D7_Data macro
+macro SetLCD_2D7_Data
+	or		[Port_2_Data_SHADE], 8h
+	mov		a, [Port_2_Data_SHADE]
+	mov		reg[LCD_2D7_Data_ADDR], a
+endm
+;   ClearLCD_2D7_Data macro
+macro ClearLCD_2D7_Data
+	and		[Port_2_Data_SHADE], ~8h
+	mov		a, [Port_2_Data_SHADE]
+	mov		reg[LCD_2D7_Data_ADDR], a
+endm
+
+; LCD_2D7_DriveMode_0 access macros
+;   GetLCD_2D7_DriveMode_0 macro, return in a
+macro GetLCD_2D7_DriveMode_0
+	mov		a,[Port_2_DriveMode_0_SHADE]
+	and		a, 8h
+endm
+;   SetLCD_2D7_DriveMode_0 macro
+macro SetLCD_2D7_DriveMode_0
+	or		[Port_2_DriveMode_0_SHADE], 8h
+	mov		a, [Port_2_DriveMode_0_SHADE]
+	mov		reg[LCD_2D7_Data_ADDR], a
+endm
+;   ClearLCD_2D7_DriveMode_0 macro
+macro ClearLCD_2D7_DriveMode_0
+	and		[Port_2_DriveMode_0_SHADE], ~8h
+	mov		a, [Port_2_DriveMode_0_SHADE]
+	mov		reg[LCD_2D7_Data_ADDR], a
+endm
+
+; LCD_2D7_DriveMode_1 access macros
+;   GetLCD_2D7_DriveMode_1 macro, return in a
+macro GetLCD_2D7_DriveMode_1
+	mov		a,[Port_2_DriveMode_1_SHADE]
+	and		a, 8h
+endm
+;   SetLCD_2D7_DriveMode_1 macro
+macro SetLCD_2D7_DriveMode_1
+	or		[Port_2_DriveMode_1_SHADE], 8h
+	mov		a, [Port_2_DriveMode_1_SHADE]
+	mov		reg[LCD_2D7_Data_ADDR], a
+endm
+;   ClearLCD_2D7_DriveMode_1 macro
+macro ClearLCD_2D7_DriveMode_1
+	and		[Port_2_DriveMode_1_SHADE], ~8h
+	mov		a, [Port_2_DriveMode_1_SHADE]
+	mov		reg[LCD_2D7_Data_ADDR], a
+endm
+
+; LCD_2E address and mask equates
+LCD_2E_Data_ADDR:	equ	8h
+LCD_2E_DriveMode_0_ADDR:	equ	108h
+LCD_2E_DriveMode_1_ADDR:	equ	109h
+LCD_2E_DriveMode_2_ADDR:	equ	bh
+LCD_2E_GlobalSelect_ADDR:	equ	ah
+LCD_2E_IntCtrl_0_ADDR:	equ	10ah
+LCD_2E_IntCtrl_1_ADDR:	equ	10bh
+LCD_2E_IntEn_ADDR:	equ	9h
+LCD_2E_MASK:	equ	10h
+LCD_2E_MUXBusCtrl_ADDR:	equ	1dah
+; LCD_2E_Data access macros
+;   GetLCD_2E_Data macro, return in a
+macro GetLCD_2E_Data
+	mov		a,[Port_2_Data_SHADE]
+	and		a, 10h
+endm
+;   SetLCD_2E_Data macro
+macro SetLCD_2E_Data
+	or		[Port_2_Data_SHADE], 10h
+	mov		a, [Port_2_Data_SHADE]
+	mov		reg[LCD_2E_Data_ADDR], a
+endm
+;   ClearLCD_2E_Data macro
+macro ClearLCD_2E_Data
+	and		[Port_2_Data_SHADE], ~10h
+	mov		a, [Port_2_Data_SHADE]
+	mov		reg[LCD_2E_Data_ADDR], a
+endm
+
+; LCD_2E_DriveMode_0 access macros
+;   GetLCD_2E_DriveMode_0 macro, return in a
+macro GetLCD_2E_DriveMode_0
+	mov		a,[Port_2_DriveMode_0_SHADE]
+	and		a, 10h
+endm
+;   SetLCD_2E_DriveMode_0 macro
+macro SetLCD_2E_DriveMode_0
+	or		[Port_2_DriveMode_0_SHADE], 10h
+	mov		a, [Port_2_DriveMode_0_SHADE]
+	mov		reg[LCD_2E_Data_ADDR], a
+endm
+;   ClearLCD_2E_DriveMode_0 macro
+macro ClearLCD_2E_DriveMode_0
+	and		[Port_2_DriveMode_0_SHADE], ~10h
+	mov		a, [Port_2_DriveMode_0_SHADE]
+	mov		reg[LCD_2E_Data_ADDR], a
+endm
+
+; LCD_2E_DriveMode_1 access macros
+;   GetLCD_2E_DriveMode_1 macro, return in a
+macro GetLCD_2E_DriveMode_1
+	mov		a,[Port_2_DriveMode_1_SHADE]
+	and		a, 10h
+endm
+;   SetLCD_2E_DriveMode_1 macro
+macro SetLCD_2E_DriveMode_1
+	or		[Port_2_DriveMode_1_SHADE], 10h
+	mov		a, [Port_2_DriveMode_1_SHADE]
+	mov		reg[LCD_2E_Data_ADDR], a
+endm
+;   ClearLCD_2E_DriveMode_1 macro
+macro ClearLCD_2E_DriveMode_1
+	and		[Port_2_DriveMode_1_SHADE], ~10h
+	mov		a, [Port_2_DriveMode_1_SHADE]
+	mov		reg[LCD_2E_Data_ADDR], a
+endm
+
+; LCD_2RS address and mask equates
+LCD_2RS_Data_ADDR:	equ	8h
+LCD_2RS_DriveMode_0_ADDR:	equ	108h
+LCD_2RS_DriveMode_1_ADDR:	equ	109h
+LCD_2RS_DriveMode_2_ADDR:	equ	bh
+LCD_2RS_GlobalSelect_ADDR:	equ	ah
+LCD_2RS_IntCtrl_0_ADDR:	equ	10ah
+LCD_2RS_IntCtrl_1_ADDR:	equ	10bh
+LCD_2RS_IntEn_ADDR:	equ	9h
+LCD_2RS_MASK:	equ	20h
+LCD_2RS_MUXBusCtrl_ADDR:	equ	1dah
+; LCD_2RS_Data access macros
+;   GetLCD_2RS_Data macro, return in a
+macro GetLCD_2RS_Data
+	mov		a,[Port_2_Data_SHADE]
+	and		a, 20h
+endm
+;   SetLCD_2RS_Data macro
+macro SetLCD_2RS_Data
+	or		[Port_2_Data_SHADE], 20h
+	mov		a, [Port_2_Data_SHADE]
+	mov		reg[LCD_2RS_Data_ADDR], a
+endm
+;   ClearLCD_2RS_Data macro
+macro ClearLCD_2RS_Data
+	and		[Port_2_Data_SHADE], ~20h
+	mov		a, [Port_2_Data_SHADE]
+	mov		reg[LCD_2RS_Data_ADDR], a
+endm
+
+; LCD_2RS_DriveMode_0 access macros
+;   GetLCD_2RS_DriveMode_0 macro, return in a
+macro GetLCD_2RS_DriveMode_0
+	mov		a,[Port_2_DriveMode_0_SHADE]
+	and		a, 20h
+endm
+;   SetLCD_2RS_DriveMode_0 macro
+macro SetLCD_2RS_DriveMode_0
+	or		[Port_2_DriveMode_0_SHADE], 20h
+	mov		a, [Port_2_DriveMode_0_SHADE]
+	mov		reg[LCD_2RS_Data_ADDR], a
+endm
+;   ClearLCD_2RS_DriveMode_0 macro
+macro ClearLCD_2RS_DriveMode_0
+	and		[Port_2_DriveMode_0_SHADE], ~20h
+	mov		a, [Port_2_DriveMode_0_SHADE]
+	mov		reg[LCD_2RS_Data_ADDR], a
+endm
+
+; LCD_2RS_DriveMode_1 access macros
+;   GetLCD_2RS_DriveMode_1 macro, return in a
+macro GetLCD_2RS_DriveMode_1
+	mov		a,[Port_2_DriveMode_1_SHADE]
+	and		a, 20h
+endm
+;   SetLCD_2RS_DriveMode_1 macro
+macro SetLCD_2RS_DriveMode_1
+	or		[Port_2_DriveMode_1_SHADE], 20h
+	mov		a, [Port_2_DriveMode_1_SHADE]
+	mov		reg[LCD_2RS_Data_ADDR], a
+endm
+;   ClearLCD_2RS_DriveMode_1 macro
+macro ClearLCD_2RS_DriveMode_1
+	and		[Port_2_DriveMode_1_SHADE], ~20h
+	mov		a, [Port_2_DriveMode_1_SHADE]
+	mov		reg[LCD_2RS_Data_ADDR], a
+endm
+
+; LCD_2RW address and mask equates
+LCD_2RW_Data_ADDR:	equ	8h
+LCD_2RW_DriveMode_0_ADDR:	equ	108h
+LCD_2RW_DriveMode_1_ADDR:	equ	109h
+LCD_2RW_DriveMode_2_ADDR:	equ	bh
+LCD_2RW_GlobalSelect_ADDR:	equ	ah
+LCD_2RW_IntCtrl_0_ADDR:	equ	10ah
+LCD_2RW_IntCtrl_1_ADDR:	equ	10bh
+LCD_2RW_IntEn_ADDR:	equ	9h
+LCD_2RW_MASK:	equ	40h
+LCD_2RW_MUXBusCtrl_ADDR:	equ	1dah
+; LCD_2RW_Data access macros
+;   GetLCD_2RW_Data macro, return in a
+macro GetLCD_2RW_Data
+	mov		a,[Port_2_Data_SHADE]
+	and		a, 40h
+endm
+;   SetLCD_2RW_Data macro
+macro SetLCD_2RW_Data
+	or		[Port_2_Data_SHADE], 40h
+	mov		a, [Port_2_Data_SHADE]
+	mov		reg[LCD_2RW_Data_ADDR], a
+endm
+;   ClearLCD_2RW_Data macro
+macro ClearLCD_2RW_Data
+	and		[Port_2_Data_SHADE], ~40h
+	mov		a, [Port_2_Data_SHADE]
+	mov		reg[LCD_2RW_Data_ADDR], a
+endm
+
+; LCD_2RW_DriveMode_0 access macros
+;   GetLCD_2RW_DriveMode_0 macro, return in a
+macro GetLCD_2RW_DriveMode_0
+	mov		a,[Port_2_DriveMode_0_SHADE]
+	and		a, 40h
+endm
+;   SetLCD_2RW_DriveMode_0 macro
+macro SetLCD_2RW_DriveMode_0
+	or		[Port_2_DriveMode_0_SHADE], 40h
+	mov		a, [Port_2_DriveMode_0_SHADE]
+	mov		reg[LCD_2RW_Data_ADDR], a
+endm
+;   ClearLCD_2RW_DriveMode_0 macro
+macro ClearLCD_2RW_DriveMode_0
+	and		[Port_2_DriveMode_0_SHADE], ~40h
+	mov		a, [Port_2_DriveMode_0_SHADE]
+	mov		reg[LCD_2RW_Data_ADDR], a
+endm
+
+; LCD_2RW_DriveMode_1 access macros
+;   GetLCD_2RW_DriveMode_1 macro, return in a
+macro GetLCD_2RW_DriveMode_1
+	mov		a,[Port_2_DriveMode_1_SHADE]
+	and		a, 40h
+endm
+;   SetLCD_2RW_DriveMode_1 macro
+macro SetLCD_2RW_DriveMode_1
+	or		[Port_2_DriveMode_1_SHADE], 40h
+	mov		a, [Port_2_DriveMode_1_SHADE]
+	mov		reg[LCD_2RW_Data_ADDR], a
+endm
+;   ClearLCD_2RW_DriveMode_1 macro
+macro ClearLCD_2RW_DriveMode_1
+	and		[Port_2_DriveMode_1_SHADE], ~40h
+	mov		a, [Port_2_DriveMode_1_SHADE]
+	mov		reg[LCD_2RW_Data_ADDR], a
+endm
+

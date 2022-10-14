@@ -1,34 +1,20 @@
 Starting MAKE...
-creating project.mk 
-
-lib/i2chw_tempcommon.asm
-
-lib/i2chw_tempint.asm
-
-lib/i2chw_tempmstr.asm
-
-lib/i2chw_temprsrcinits.asm
-
-lib/psocconfig.asm
-
-lib/psocconfigtbl.asm
-
-./boot.asm
+creating project.mk -- no changes
 
 Linking..
 
-LMM info: area 'InterruptRAM' uses 9 bytes in SRAM bank 0
+LMM info: area 'InterruptRAM' uses 12 bytes in SRAM bank 0
 
 LMM info: area 'virtual_registers' uses 7 bytes in SRAM page 0
 
 idata dump at output/PDProject1.idata
 
-  ROM 12% full. 1863 out of 16384 bytes used (does not include absolute areas).
+  ROM 17% full. 2687 out of 16384 bytes used (does not include absolute areas).
 
-  RAM 3% full. 16 bytes used (does not include stack usage).
+  RAM 3% full. 19 bytes used (does not include stack usage).
 
 Built with ICCM8C STD V7.05.00
 
  
-PDProject1 - 0 error(s) 0 warning(s) 17:12:36
+PDProject1 - 0 error(s) 0 warning(s) 18:41:44
 

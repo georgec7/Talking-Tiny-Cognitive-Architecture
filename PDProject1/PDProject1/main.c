@@ -4,7 +4,7 @@
 
 #include <m8c.h>        // part specific constants and macros
 #include "PSoCAPI.h"    // PSoC API definitions for all User Modules
-
+#include <stdio.h>
 #define ADDRESS_TEMP_SENSOR 0x18
 #define READ_BYTE 			0x01
 #define WRITE_BYTE          0x00
@@ -19,6 +19,9 @@ void main(void)
 {
 	// M8C_EnableGInt ; // Uncomment this line to enable Global Interrupts
 	// Insert your main routine code here.
+	LCD_2_Start();
+	I2CHW_Temp_EnableMstr();
+	
 	
 	while (1)
 	{
@@ -28,17 +31,25 @@ void main(void)
 
 void read_temp_and_print(void)
 {
-	BYTE UpperByte,LowerByte;
-	INT Temperature;
-	
+	BYTE UpperByte = 0;
+	BYTE LowerByte = 0;
+	INT Temperature =0;
+	char buffer[9];
+	char buffer1[20] ="hello\n";
+
 	I2CHW_Temp_fSendStart(ADDRESS_TEMP_SENSOR, I2CHW_Temp_WRITE);
+	
+
+	
 	I2CHW_Temp_fWrite(TEMP_REG);
+
 	I2CHW_Temp_SendStop();
 	
 	I2CHW_Temp_fSendStart(ADDRESS_TEMP_SENSOR, I2CHW_Temp_READ);
 	UpperByte = I2CHW_Temp_bRead(I2CHW_Temp_ACKslave);
 	LowerByte = I2CHW_Temp_bRead(I2CHW_Temp_NAKslave);
 	I2CHW_Temp_SendStop();
+	
 	
 	//First Check flag bits
 	if ((UpperByte & 0x80) == 0x80){ //TA ≥ TCRIT
@@ -55,7 +66,12 @@ void read_temp_and_print(void)
 	
 	Temperature = (UpperByte * 16 + LowerByte / 16);//Temperature = Ambient Temperature (°C)
 	
-	
-	
-	
+	LCD_2_Position(0,0);
+	LCD_2_PrHexInt(Temperature);
+	LCD_2_Delay50uTimes(255);
+	LCD_2_Delay50uTimes(255);
+	LCD_2_Delay50uTimes(255);
+	LCD_2_Delay50uTimes(255);
+
+
 }

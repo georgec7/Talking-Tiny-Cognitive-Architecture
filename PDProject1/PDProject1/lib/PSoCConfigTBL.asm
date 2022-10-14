@@ -21,6 +21,7 @@ export LoadConfigTBL_pdproject1_Ordered
 AREA lit(rom, rel)
 LoadConfigTBL_pdproject1_Bank0:
 ;  Instance name I2CHW_Temp, User Module I2CHW
+;  Instance name LCD_2, User Module LCD
 ;  Global Register values Bank 0
 	db		62h, 00h		; AnalogClockSelect3 register (CLK_CR3)
 	db		60h, 29h		; AnalogColumnInputSelect register (AMX_IN)
@@ -64,6 +65,7 @@ LoadConfigTBL_pdproject1_Bank0:
 	db		ffh
 LoadConfigTBL_pdproject1_Bank1:
 ;  Instance name I2CHW_Temp, User Module I2CHW
+;  Instance name LCD_2, User Module LCD
 ;  Global Register values Bank 1
 	db		61h, 00h		; AnalogClockSelect1 register (CLK_CR1)
 	db		69h, 00h		; AnalogClockSelect2 register (CLK_CR2)
@@ -160,10 +162,10 @@ LoadConfigTBL_pdproject1_Ordered:
 	mov	reg[05h], 00h		; Port_1_IntEn register (PRT1IE)
 	mov	reg[08h], 00h		; Port_2_Data register (PRT2DR)
 	M8C_SetBank1
-	mov	reg[08h], 00h		; Port_2_DriveMode_0 register (PRT2DM0)
-	mov	reg[09h], ffh		; Port_2_DriveMode_1 register (PRT2DM1)
+	mov	reg[08h], 7fh		; Port_2_DriveMode_0 register (PRT2DM0)
+	mov	reg[09h], 80h		; Port_2_DriveMode_1 register (PRT2DM1)
 	M8C_SetBank0
-	mov	reg[0bh], ffh		; Port_2_DriveMode_2 register (PRT2DM2)
+	mov	reg[0bh], 80h		; Port_2_DriveMode_2 register (PRT2DM2)
 	mov	reg[0ah], 00h		; Port_2_GlobalSelect register (PRT2GS)
 	M8C_SetBank1
 	mov	reg[0ah], 00h		; Port_2_IntCtrl_0 register (PRT2IC0)

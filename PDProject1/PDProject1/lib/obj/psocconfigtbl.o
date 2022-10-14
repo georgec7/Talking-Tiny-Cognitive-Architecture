@@ -13,80 +13,80 @@ A psoc_config size C5 flags 0
 dbfile lib/psocconfigtbl.asm
 dbfunc 0 ? 0 I
 dbline 2 0
-dbline 89 2
+dbline 8B 2
 dbline 2 5
-dbline 8B 7
-dbline 8C A
+dbline 8D 7
+dbline 8E A
 dbline 2 D
-dbline 8E F
-dbline 8F 12
+dbline 90 F
+dbline 91 12
 dbline 2 15
-dbline 91 17
-dbline 92 1A
+dbline 93 17
+dbline 94 1A
 dbline 2 1D
-dbline 94 1F
-dbline 95 22
+dbline 96 1F
+dbline 97 22
 dbline 2 25
-dbline 97 27
-dbline 98 2A
+dbline 99 27
+dbline 9A 2A
 dbline 2 2D
-dbline 9A 2F
-dbline 9B 32
+dbline 9C 2F
+dbline 9D 32
 dbline 2 35
-dbline 9D 37
-dbline 9E 3A
+dbline 9F 37
+dbline A0 3A
 dbline 2 3D
-dbline A0 3F
-dbline A1 42
+dbline A2 3F
+dbline A3 42
 dbline 2 45
-dbline A3 47
-dbline A4 4A
+dbline A5 47
+dbline A6 4A
 dbline 2 4D
-dbline A6 4F
-dbline A7 52
+dbline A8 4F
+dbline A9 52
 dbline 2 55
-dbline A9 57
-dbline AA 5A
+dbline AB 57
+dbline AC 5A
 dbline 2 5D
-dbline AC 5F
-dbline AD 62
+dbline AE 5F
+dbline AF 62
 dbline 2 65
-dbline AF 67
-dbline B0 6A
+dbline B1 67
+dbline B2 6A
 dbline 2 6D
-dbline B2 6F
-dbline B3 72
+dbline B4 6F
+dbline B5 72
 dbline 2 75
-dbline B5 77
-dbline B6 7A
+dbline B7 77
+dbline B8 7A
 dbline 2 7D
-dbline B8 7F
-dbline B9 82
+dbline BA 7F
+dbline BB 82
 dbline 2 85
-dbline BB 87
-dbline BC 8A
+dbline BD 87
+dbline BE 8A
 dbline 2 8D
-dbline BE 8F
-dbline BF 92
+dbline C0 8F
+dbline C1 92
 dbline 2 95
-dbline C1 97
-dbline C2 9A
+dbline C3 97
+dbline C4 9A
 dbline 2 9D
-dbline C4 9F
-dbline C5 A2
+dbline C6 9F
+dbline C7 A2
 dbline 2 A5
-dbline C7 A7
-dbline C8 AA
+dbline C9 A7
+dbline CA AA
 dbline 2 AD
-dbline CA AF
-dbline CB B2
+dbline CC AF
+dbline CD B2
 dbline 2 B5
-dbline CD B7
-dbline CE BA
+dbline CF B7
+dbline D0 BA
 dbline 2 BD
-dbline D0 BF
+dbline D2 BF
 dbline 2 C2
-dbline D2 C4
+dbline D4 C4
 S LoadConfigTBL_pdproject1_Ordered Def0000
 T 00 00 62 00 60 29 66 00 61 00 FC 00 FD 00 63 05
 R 00 00 00 01
@@ -128,7 +128,7 @@ T 00 2A 62 05 FF 70 EF 62 07 FF 62 06 00 71 10 62
 R 00 00 00 02
 T 00 38 06 00 62 07 00 70 EF 62 05 00 62 08 00 71
 R 00 00 00 02
-T 00 46 10 62 08 00 62 09 FF 70 EF 62 0B FF 62 0A
+T 00 46 10 62 08 7F 62 09 80 70 EF 62 0B 80 62 0A
 R 00 00 00 02
 T 00 54 00 71 10 62 0A 00 62 0B 00 70 EF 62 09 00
 R 00 00 00 02

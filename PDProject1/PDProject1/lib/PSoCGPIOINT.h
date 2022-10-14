@@ -42,3 +42,213 @@ BYTE			I2CHW_TempSCL_IntEn_ADDR;
 #define I2CHW_TempSCL_MASK 0x2
 #pragma	ioport	I2CHW_TempSCL_MUXBusCtrl_ADDR:	0x1d9
 BYTE			I2CHW_TempSCL_MUXBusCtrl_ADDR;
+// LCD_2D4 address and mask defines
+#pragma	ioport	LCD_2D4_Data_ADDR:	0x8
+BYTE			LCD_2D4_Data_ADDR;
+#pragma	ioport	LCD_2D4_DriveMode_0_ADDR:	0x108
+BYTE			LCD_2D4_DriveMode_0_ADDR;
+#pragma	ioport	LCD_2D4_DriveMode_1_ADDR:	0x109
+BYTE			LCD_2D4_DriveMode_1_ADDR;
+#pragma	ioport	LCD_2D4_DriveMode_2_ADDR:	0xb
+BYTE			LCD_2D4_DriveMode_2_ADDR;
+#pragma	ioport	LCD_2D4_GlobalSelect_ADDR:	0xa
+BYTE			LCD_2D4_GlobalSelect_ADDR;
+#pragma	ioport	LCD_2D4_IntCtrl_0_ADDR:	0x10a
+BYTE			LCD_2D4_IntCtrl_0_ADDR;
+#pragma	ioport	LCD_2D4_IntCtrl_1_ADDR:	0x10b
+BYTE			LCD_2D4_IntCtrl_1_ADDR;
+#pragma	ioport	LCD_2D4_IntEn_ADDR:	0x9
+BYTE			LCD_2D4_IntEn_ADDR;
+#define LCD_2D4_MASK 0x1
+#pragma	ioport	LCD_2D4_MUXBusCtrl_ADDR:	0x1da
+BYTE			LCD_2D4_MUXBusCtrl_ADDR;
+// LCD_2D4 Shadow defines
+//   LCD_2D4_DataShadow define
+extern BYTE Port_2_Data_SHADE;
+#define LCD_2D4_DataShadow (*(unsigned char*)&Port_2_Data_SHADE)
+//   LCD_2D4_DriveMode_0Shadow define
+extern BYTE Port_2_DriveMode_0_SHADE;
+#define LCD_2D4_DriveMode_0Shadow (*(unsigned char*)&Port_2_DriveMode_0_SHADE)
+//   LCD_2D4_DriveMode_1Shadow define
+extern BYTE Port_2_DriveMode_1_SHADE;
+#define LCD_2D4_DriveMode_1Shadow (*(unsigned char*)&Port_2_DriveMode_1_SHADE)
+// LCD_2D5 address and mask defines
+#pragma	ioport	LCD_2D5_Data_ADDR:	0x8
+BYTE			LCD_2D5_Data_ADDR;
+#pragma	ioport	LCD_2D5_DriveMode_0_ADDR:	0x108
+BYTE			LCD_2D5_DriveMode_0_ADDR;
+#pragma	ioport	LCD_2D5_DriveMode_1_ADDR:	0x109
+BYTE			LCD_2D5_DriveMode_1_ADDR;
+#pragma	ioport	LCD_2D5_DriveMode_2_ADDR:	0xb
+BYTE			LCD_2D5_DriveMode_2_ADDR;
+#pragma	ioport	LCD_2D5_GlobalSelect_ADDR:	0xa
+BYTE			LCD_2D5_GlobalSelect_ADDR;
+#pragma	ioport	LCD_2D5_IntCtrl_0_ADDR:	0x10a
+BYTE			LCD_2D5_IntCtrl_0_ADDR;
+#pragma	ioport	LCD_2D5_IntCtrl_1_ADDR:	0x10b
+BYTE			LCD_2D5_IntCtrl_1_ADDR;
+#pragma	ioport	LCD_2D5_IntEn_ADDR:	0x9
+BYTE			LCD_2D5_IntEn_ADDR;
+#define LCD_2D5_MASK 0x2
+#pragma	ioport	LCD_2D5_MUXBusCtrl_ADDR:	0x1da
+BYTE			LCD_2D5_MUXBusCtrl_ADDR;
+// LCD_2D5 Shadow defines
+//   LCD_2D5_DataShadow define
+extern BYTE Port_2_Data_SHADE;
+#define LCD_2D5_DataShadow (*(unsigned char*)&Port_2_Data_SHADE)
+//   LCD_2D5_DriveMode_0Shadow define
+extern BYTE Port_2_DriveMode_0_SHADE;
+#define LCD_2D5_DriveMode_0Shadow (*(unsigned char*)&Port_2_DriveMode_0_SHADE)
+//   LCD_2D5_DriveMode_1Shadow define
+extern BYTE Port_2_DriveMode_1_SHADE;
+#define LCD_2D5_DriveMode_1Shadow (*(unsigned char*)&Port_2_DriveMode_1_SHADE)
+// LCD_2D6 address and mask defines
+#pragma	ioport	LCD_2D6_Data_ADDR:	0x8
+BYTE			LCD_2D6_Data_ADDR;
+#pragma	ioport	LCD_2D6_DriveMode_0_ADDR:	0x108
+BYTE			LCD_2D6_DriveMode_0_ADDR;
+#pragma	ioport	LCD_2D6_DriveMode_1_ADDR:	0x109
+BYTE			LCD_2D6_DriveMode_1_ADDR;
+#pragma	ioport	LCD_2D6_DriveMode_2_ADDR:	0xb
+BYTE			LCD_2D6_DriveMode_2_ADDR;
+#pragma	ioport	LCD_2D6_GlobalSelect_ADDR:	0xa
+BYTE			LCD_2D6_GlobalSelect_ADDR;
+#pragma	ioport	LCD_2D6_IntCtrl_0_ADDR:	0x10a
+BYTE			LCD_2D6_IntCtrl_0_ADDR;
+#pragma	ioport	LCD_2D6_IntCtrl_1_ADDR:	0x10b
+BYTE			LCD_2D6_IntCtrl_1_ADDR;
+#pragma	ioport	LCD_2D6_IntEn_ADDR:	0x9
+BYTE			LCD_2D6_IntEn_ADDR;
+#define LCD_2D6_MASK 0x4
+#pragma	ioport	LCD_2D6_MUXBusCtrl_ADDR:	0x1da
+BYTE			LCD_2D6_MUXBusCtrl_ADDR;
+// LCD_2D6 Shadow defines
+//   LCD_2D6_DataShadow define
+extern BYTE Port_2_Data_SHADE;
+#define LCD_2D6_DataShadow (*(unsigned char*)&Port_2_Data_SHADE)
+//   LCD_2D6_DriveMode_0Shadow define
+extern BYTE Port_2_DriveMode_0_SHADE;
+#define LCD_2D6_DriveMode_0Shadow (*(unsigned char*)&Port_2_DriveMode_0_SHADE)
+//   LCD_2D6_DriveMode_1Shadow define
+extern BYTE Port_2_DriveMode_1_SHADE;
+#define LCD_2D6_DriveMode_1Shadow (*(unsigned char*)&Port_2_DriveMode_1_SHADE)
+// LCD_2D7 address and mask defines
+#pragma	ioport	LCD_2D7_Data_ADDR:	0x8
+BYTE			LCD_2D7_Data_ADDR;
+#pragma	ioport	LCD_2D7_DriveMode_0_ADDR:	0x108
+BYTE			LCD_2D7_DriveMode_0_ADDR;
+#pragma	ioport	LCD_2D7_DriveMode_1_ADDR:	0x109
+BYTE			LCD_2D7_DriveMode_1_ADDR;
+#pragma	ioport	LCD_2D7_DriveMode_2_ADDR:	0xb
+BYTE			LCD_2D7_DriveMode_2_ADDR;
+#pragma	ioport	LCD_2D7_GlobalSelect_ADDR:	0xa
+BYTE			LCD_2D7_GlobalSelect_ADDR;
+#pragma	ioport	LCD_2D7_IntCtrl_0_ADDR:	0x10a
+BYTE			LCD_2D7_IntCtrl_0_ADDR;
+#pragma	ioport	LCD_2D7_IntCtrl_1_ADDR:	0x10b
+BYTE			LCD_2D7_IntCtrl_1_ADDR;
+#pragma	ioport	LCD_2D7_IntEn_ADDR:	0x9
+BYTE			LCD_2D7_IntEn_ADDR;
+#define LCD_2D7_MASK 0x8
+#pragma	ioport	LCD_2D7_MUXBusCtrl_ADDR:	0x1da
+BYTE			LCD_2D7_MUXBusCtrl_ADDR;
+// LCD_2D7 Shadow defines
+//   LCD_2D7_DataShadow define
+extern BYTE Port_2_Data_SHADE;
+#define LCD_2D7_DataShadow (*(unsigned char*)&Port_2_Data_SHADE)
+//   LCD_2D7_DriveMode_0Shadow define
+extern BYTE Port_2_DriveMode_0_SHADE;
+#define LCD_2D7_DriveMode_0Shadow (*(unsigned char*)&Port_2_DriveMode_0_SHADE)
+//   LCD_2D7_DriveMode_1Shadow define
+extern BYTE Port_2_DriveMode_1_SHADE;
+#define LCD_2D7_DriveMode_1Shadow (*(unsigned char*)&Port_2_DriveMode_1_SHADE)
+// LCD_2E address and mask defines
+#pragma	ioport	LCD_2E_Data_ADDR:	0x8
+BYTE			LCD_2E_Data_ADDR;
+#pragma	ioport	LCD_2E_DriveMode_0_ADDR:	0x108
+BYTE			LCD_2E_DriveMode_0_ADDR;
+#pragma	ioport	LCD_2E_DriveMode_1_ADDR:	0x109
+BYTE			LCD_2E_DriveMode_1_ADDR;
+#pragma	ioport	LCD_2E_DriveMode_2_ADDR:	0xb
+BYTE			LCD_2E_DriveMode_2_ADDR;
+#pragma	ioport	LCD_2E_GlobalSelect_ADDR:	0xa
+BYTE			LCD_2E_GlobalSelect_ADDR;
+#pragma	ioport	LCD_2E_IntCtrl_0_ADDR:	0x10a
+BYTE			LCD_2E_IntCtrl_0_ADDR;
+#pragma	ioport	LCD_2E_IntCtrl_1_ADDR:	0x10b
+BYTE			LCD_2E_IntCtrl_1_ADDR;
+#pragma	ioport	LCD_2E_IntEn_ADDR:	0x9
+BYTE			LCD_2E_IntEn_ADDR;
+#define LCD_2E_MASK 0x10
+#pragma	ioport	LCD_2E_MUXBusCtrl_ADDR:	0x1da
+BYTE			LCD_2E_MUXBusCtrl_ADDR;
+// LCD_2E Shadow defines
+//   LCD_2E_DataShadow define
+extern BYTE Port_2_Data_SHADE;
+#define LCD_2E_DataShadow (*(unsigned char*)&Port_2_Data_SHADE)
+//   LCD_2E_DriveMode_0Shadow define
+extern BYTE Port_2_DriveMode_0_SHADE;
+#define LCD_2E_DriveMode_0Shadow (*(unsigned char*)&Port_2_DriveMode_0_SHADE)
+//   LCD_2E_DriveMode_1Shadow define
+extern BYTE Port_2_DriveMode_1_SHADE;
+#define LCD_2E_DriveMode_1Shadow (*(unsigned char*)&Port_2_DriveMode_1_SHADE)
+// LCD_2RS address and mask defines
+#pragma	ioport	LCD_2RS_Data_ADDR:	0x8
+BYTE			LCD_2RS_Data_ADDR;
+#pragma	ioport	LCD_2RS_DriveMode_0_ADDR:	0x108
+BYTE			LCD_2RS_DriveMode_0_ADDR;
+#pragma	ioport	LCD_2RS_DriveMode_1_ADDR:	0x109
+BYTE			LCD_2RS_DriveMode_1_ADDR;
+#pragma	ioport	LCD_2RS_DriveMode_2_ADDR:	0xb
+BYTE			LCD_2RS_DriveMode_2_ADDR;
+#pragma	ioport	LCD_2RS_GlobalSelect_ADDR:	0xa
+BYTE			LCD_2RS_GlobalSelect_ADDR;
+#pragma	ioport	LCD_2RS_IntCtrl_0_ADDR:	0x10a
+BYTE			LCD_2RS_IntCtrl_0_ADDR;
+#pragma	ioport	LCD_2RS_IntCtrl_1_ADDR:	0x10b
+BYTE			LCD_2RS_IntCtrl_1_ADDR;
+#pragma	ioport	LCD_2RS_IntEn_ADDR:	0x9
+BYTE			LCD_2RS_IntEn_ADDR;
+#define LCD_2RS_MASK 0x20
+#pragma	ioport	LCD_2RS_MUXBusCtrl_ADDR:	0x1da
+BYTE			LCD_2RS_MUXBusCtrl_ADDR;
+// LCD_2RS Shadow defines
+//   LCD_2RS_DataShadow define
+extern BYTE Port_2_Data_SHADE;
+#define LCD_2RS_DataShadow (*(unsigned char*)&Port_2_Data_SHADE)
+//   LCD_2RS_DriveMode_0Shadow define
+extern BYTE Port_2_DriveMode_0_SHADE;
+#define LCD_2RS_DriveMode_0Shadow (*(unsigned char*)&Port_2_DriveMode_0_SHADE)
+//   LCD_2RS_DriveMode_1Shadow define
+extern BYTE Port_2_DriveMode_1_SHADE;
+#define LCD_2RS_DriveMode_1Shadow (*(unsigned char*)&Port_2_DriveMode_1_SHADE)
+// LCD_2RW address and mask defines
+#pragma	ioport	LCD_2RW_Data_ADDR:	0x8
+BYTE			LCD_2RW_Data_ADDR;
+#pragma	ioport	LCD_2RW_DriveMode_0_ADDR:	0x108
+BYTE			LCD_2RW_DriveMode_0_ADDR;
+#pragma	ioport	LCD_2RW_DriveMode_1_ADDR:	0x109
+BYTE			LCD_2RW_DriveMode_1_ADDR;
+#pragma	ioport	LCD_2RW_DriveMode_2_ADDR:	0xb
+BYTE			LCD_2RW_DriveMode_2_ADDR;
+#pragma	ioport	LCD_2RW_GlobalSelect_ADDR:	0xa
+BYTE			LCD_2RW_GlobalSelect_ADDR;
+#pragma	ioport	LCD_2RW_IntCtrl_0_ADDR:	0x10a
+BYTE			LCD_2RW_IntCtrl_0_ADDR;
+#pragma	ioport	LCD_2RW_IntCtrl_1_ADDR:	0x10b
+BYTE			LCD_2RW_IntCtrl_1_ADDR;
+#pragma	ioport	LCD_2RW_IntEn_ADDR:	0x9
+BYTE			LCD_2RW_IntEn_ADDR;
+#define LCD_2RW_MASK 0x40
+#pragma	ioport	LCD_2RW_MUXBusCtrl_ADDR:	0x1da
+BYTE			LCD_2RW_MUXBusCtrl_ADDR;
+// LCD_2RW Shadow defines
+//   LCD_2RW_DataShadow define
+extern BYTE Port_2_Data_SHADE;
+#define LCD_2RW_DataShadow (*(unsigned char*)&Port_2_Data_SHADE)
+//   LCD_2RW_DriveMode_0Shadow define
+extern BYTE Port_2_DriveMode_0_SHADE;
+#define LCD_2RW_DriveMode_0Shadow (*(unsigned char*)&Port_2_DriveMode_0_SHADE)
+//   LCD_2RW_DriveMode_1Shadow define
+extern BYTE Port_2_DriveMode_1_SHADE;
+#define LCD_2RW_DriveMode_1Shadow (*(unsigned char*)&Port_2_DriveMode_1_SHADE)

@@ -8,6 +8,14 @@ dbfile lib/i2chw_temprsrcinits.asm
 dbfunc 0 ? 0 I
 dbfile PSoCAPI.inc
 dbfunc 0 ? 0 I
+dbfile LCD_2.inc
+dbfunc 0 ? 0 I
+dbfile C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CYPRES~1/tools/include/CY8C28~1/m8c.inc
+dbfunc 0 ? 0 I
+dbfile ./lib/LCD_2.inc
+dbfunc 0 ? 0 I
+dbfile PSoCAPI.inc
+dbfunc 0 ? 0 I
 dbfile ./lib/I2CHW_TempMstr.inc
 dbfunc 0 ? 0 I
 dbfile PSoCAPI.inc

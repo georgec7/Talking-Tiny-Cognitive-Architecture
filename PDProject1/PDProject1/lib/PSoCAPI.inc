@@ -16,3 +16,4 @@
 include "PSoCGPIOINT.inc"
 include "I2CHW_TempCommon.inc"
 include "I2CHW_TempMstr.inc"
+include "LCD_2.inc"

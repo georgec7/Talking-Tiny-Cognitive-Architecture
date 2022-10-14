@@ -20,5 +20,6 @@
 #include "PSoCGPIOINT.h"
 #include "I2CHW_TempMstr.h"
 #include "I2CHW_TempCommon.h"
+#include "LCD_2.h"
 
 #endif

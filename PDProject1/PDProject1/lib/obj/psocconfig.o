@@ -1,5 +1,5 @@
 XH
-H 3 areas 9 global symbols
+H 3 areas F global symbols
 M psocconfig.asm
 S LoadConfigTBL_pdproject1_Bank0 Ref0000
 S LoadConfigTBL_pdproject1_Bank1 Ref0000
@@ -17,87 +17,98 @@ dbfile lib/psocconfig.asm
 dbfunc 0 ? 0 I
 dbfile C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CYPRES~1/tools/include/CY8C28~1/m8c.inc
 dbfunc 0 ? 0 I
-A psoc_config size 62 flags 0
+A psoc_config size 6B flags 0
 dbfile lib/psocconfig.asm
 dbfunc 0 ? 0 I
-dbline 3A 0
-dbline 3B 3
-dbline 3F 6
-dbline 58 7
-dbline 2 8
-dbline 5A A
-dbline 5B C
-dbline 5D D
-dbline 5E F
-dbline 5F 11
-dbline 61 14
-dbline 62 16
-dbline 64 17
-dbline 65 19
-dbline 66 1B
-dbline 2 1E
-dbline 69 20
-dbline 6C 21
-dbline 82 22
-dbline 83 24
-dbline 84 25
-dbline 85 26
-dbline 86 27
-dbline 87 2A
-dbline 88 2C
-dbline 8A 2F
-dbline 8B 30
-dbline 2 31
-dbline 2 33
-dbline 90 36
-dbline 91 37
-dbline 92 38
-dbline 93 39
-dbline 94 3B
-dbline 95 3D
-dbline 96 3E
-dbline 97 41
-dbline 2 43
-dbline 9A 45
-dbline 9B 47
-dbline 9C 48
-dbline 9D 49
-dbline 9E 4A
-dbline 9F 4C
-dbline A0 4D
-dbline A1 4E
-dbline A2 4F
-dbline A3 50
-dbline A4 52
-dbline A5 54
-dbline A6 55
-dbline A7 56
-dbline A8 57
-dbline A9 59
-dbline AB 5B
-dbline 3 5D
-dbline 4 5F
-dbline AD 61
-S LoadConfig_pdproject1 Def0007
+dbline 41 0
+dbline 42 3
+dbline 43 6
+dbline 45 9
+dbline 46 C
+dbline 4A F
+dbline 63 10
+dbline 2 11
+dbline 65 13
+dbline 66 15
+dbline 68 16
+dbline 69 18
+dbline 6A 1A
+dbline 6C 1D
+dbline 6D 1F
+dbline 6F 20
+dbline 70 22
+dbline 71 24
+dbline 2 27
+dbline 74 29
+dbline 77 2A
+dbline 8D 2B
+dbline 8E 2D
+dbline 8F 2E
+dbline 90 2F
+dbline 91 30
+dbline 92 33
+dbline 93 35
+dbline 95 38
+dbline 96 39
+dbline 2 3A
+dbline 2 3C
+dbline 9B 3F
+dbline 9C 40
+dbline 9D 41
+dbline 9E 42
+dbline 9F 44
+dbline A0 46
+dbline A1 47
+dbline A2 4A
+dbline 2 4C
+dbline A5 4E
+dbline A6 50
+dbline A7 51
+dbline A8 52
+dbline A9 53
+dbline AA 55
+dbline AB 56
+dbline AC 57
+dbline AD 58
+dbline AE 59
+dbline AF 5B
+dbline B0 5D
+dbline B1 5E
+dbline B2 5F
+dbline B3 60
+dbline B4 62
+dbline B6 64
+dbline 3 66
+dbline 4 68
+dbline B8 6A
+S LoadConfig_pdproject1 Def0010
 S LoadConfigInit Def0000
-S _LoadConfig_pdproject1 Def0007
+S _LoadConfig_pdproject1 Def0010
 S _LoadConfigInit Def0000
-A InterruptRAM size 0 flags 20
+A InterruptRAM size 3 flags 20
 S _NO_SHADOW Def0000
+S _Port_2_Data_SHADE Def0000
+S Port_2_DriveMode_0_SHADE Def0001
+S Port_2_DriveMode_1_SHADE Def0002
 S NO_SHADOW Def0000
-T 00 00 7C 00 07 7C 00 00 7F 10 70 EF 50 00 67 50
-R 00 00 00 01 00 03 00 01 02 06 00 02
-T 00 0E 00 00 57 00 00 7C 00 22 50 01 67 50
+S _Port_2_DriveMode_0_SHADE Def0001
+S _Port_2_DriveMode_1_SHADE Def0002
+S Port_2_Data_SHADE Def0000
+T 00 00 55 00 00 00 55 00 01 7F 55 00 02 80 7C
+R 00 00 00 01 01 03 00 02 01 07 00 02 01 0B 00 02
+T 00 0A 00 10 7C 00 00 7F 10 70 EF 50 00 67 50
+R 00 00 00 01 00 02 00 01 02 05 00 02
+T 00 17 00 00 57 00 00 7C 00 2B 50 01 67 50
 R 00 00 00 01 43 02 00 00 03 05 00 00 00 08 00 01
-T 00 18 00 00 57 00 00 7C 00 22 70 EF 20 7F 38 02
+T 00 21 00 00 57 00 00 7C 00 2B 70 EF 20 7F 38 02
 R 00 00 00 01 43 02 00 01 03 05 00 01 00 08 00 01
-T 00 24 10 08 4F 56 FC 00 D0 04 56 FC 01 18 20 70
+T 00 2D 10 08 4F 56 FC 00 D0 04 56 FC 01 18 20 70
 R 00 00 00 01
-T 00 32 EF 62 E3 00 10 08 28 39 FF A0 1F 4F 48 FC
+T 00 3B EF 62 E3 00 10 08 28 39 FF A0 1F 4F 48 FC
 R 00 00 00 01
-T 00 40 01 A0 03 71 10 54 FD 18 20 75 09 00 10 08
+T 00 49 01 A0 03 71 10 54 FD 18 20 75 09 00 10 08
 R 00 00 00 01
-T 00 4E 28 4F 59 FD 61 00 18 20 75 09 00 8F D7 38
+T 00 57 28 4F 59 FD 61 00 18 20 75 09 00 8F D7 38
 R 00 00 00 01
-T 00 5C FC 70 3F 71 C0 7F
+T 00 65 FC 70 3F 71 C0 7F
 R 00 00 00 01
