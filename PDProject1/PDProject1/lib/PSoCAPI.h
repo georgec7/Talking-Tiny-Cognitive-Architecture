@@ -18,8 +18,13 @@
 #define __PSOCAPI_H
 
 #include "PSoCGPIOINT.h"
+#include "DUALADC_1.h"
 #include "I2CHW_TempMstr.h"
 #include "I2CHW_TempCommon.h"
 #include "LCD_2.h"
+#include "PGA_1.h"
+#include "PGA_2.h"
+#include "PWM8_1.h"
+#include "Timer16_1.h"
 
 #endif

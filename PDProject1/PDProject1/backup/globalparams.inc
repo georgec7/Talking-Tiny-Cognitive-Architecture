@@ -19,9 +19,9 @@
 ;=============================================================================
 ;
 
-CPU_CLOCK:				equ	0h		;CPU clock value
+CPU_CLOCK:				equ	2h		;CPU clock value
 CPU_CLOCK_MASK:			equ	7h		;CPU clock mask
-CPU_CLOCK_JUST:			equ	0h		;CPU clock value justified
+CPU_CLOCK_JUST:			equ	2h		;CPU clock value justified
 SELECT_32K:				equ	0h		;32K select value
 SELECT_32K_MASK:		equ	80h		;32K select mask
 SELECT_32K_JUST:		equ	0h		;32K select value justified
@@ -62,27 +62,27 @@ POWER_SET_SLOW_IMO:     equ 01h  ; MASK for slow Internal Main Oscillator (IMO)
 COMM_RX_PRESENT:		equ	0		;1 = TRUE
 WATCHDOG_ENABLE:		equ 0	;Watchdog Enable 1 = Enable
 
-CLOCK_DIV_VC1:			equ	fh	;VC1 clock divider
+CLOCK_DIV_VC1:			equ	1h	;VC1 clock divider
 CLOCK_DIV_VC1_MASK:		equ	f0h	;VC1 clock divider mask
-CLOCK_DIV_VC1_JUST:		equ	f0h	;VC1 clock divider justified
-CLOCK_DIV_VC2:			equ	fh	;VC2 clock divider
+CLOCK_DIV_VC1_JUST:		equ	10h	;VC1 clock divider justified
+CLOCK_DIV_VC2:			equ	9h	;VC2 clock divider
 CLOCK_DIV_VC2_MASK:		equ	fh	;VC2 clock divider mask
-CLOCK_DIV_VC2_JUST:		equ	fh	;VC2 clock divider justified
+CLOCK_DIV_VC2_JUST:		equ	9h	;VC2 clock divider justified
 CLOCK_INPUT_VC3:		equ	2h	;VC3 clock source
 CLOCK_INPUT_VC3_MASK:	equ	3h	;VC3 clock source mask
 CLOCK_INPUT_VC3_JUST:	equ	2h	;VC3 clock source justified
-CLOCK_DIV_VC3:			equ	ffh	;VC3 clock divider
+CLOCK_DIV_VC3:			equ	95h	;VC3 clock divider
 CLOCK_DIV_VC3_MASK:		equ	ffh	;VC3 clock divider mask
-CLOCK_DIV_VC3_JUST:		equ	ffh	;VC3 clock divider justified
+CLOCK_DIV_VC3_JUST:		equ	95h	;VC3 clock divider justified
 ANALOG_POWER:			equ	5h	;Analog power control
 ANALOG_POWER_MASK:		equ	7h	;Analog power control mask
 ANALOG_POWER_JUST:		equ	5h	;Analog power control justified
 OP_AMP_BIAS:			equ	0h	;Op amp bias level
 OP_AMP_BIAS_MASK:		equ	40h	;Op amp bias level mask
 OP_AMP_BIAS_JUST:		equ	0h	;Op amp bias level justified
-REF_MUX:				equ	0h	;Ref mux setting
+REF_MUX:				equ	2h	;Ref mux setting
 REF_MUX_MASK:			equ	38h	;Ref mux setting mask
-REF_MUX_JUST:			equ	0h	;Ref mux setting justified
+REF_MUX_JUST:			equ	10h	;Ref mux setting justified
 AGND_BYPASS:				equ	0h	;AGndBypass setting
 AGND_BYPASS_MASK:			equ	40h	;AGndBypass setting mask
 AGND_BYPASS_JUST:			equ	0h	;AGndBypass setting justified
@@ -95,7 +95,7 @@ SYSCLK_2_DISABLE_JUST:			equ	0h	;SysClk*2 Disable setting justified
 ;
 ; register initial values
 ;
-ANALOG_IO_CONTROL:		equ 0h	;Analog IO Control register (ABF_CR)
+ANALOG_IO_CONTROL:		equ 28h	;Analog IO Control register (ABF_CR)
 PORT_0_GLOBAL_SELECT:	equ 0h	;Port 0 global select register (PRT0GS)
 PORT_0_DRIVE_0:			equ 0h	;Port 0 drive mode 0 register (PRT0DM0)
 PORT_0_DRIVE_1:			equ ffh	;Port 0 drive mode 1 register (PRT0DM1)
@@ -103,13 +103,13 @@ PORT_0_DRIVE_2:			equ ffh	;Port 0 drive mode 2 register (PRT0DM2)
 PORT_0_INTENABLE:		equ 0h	;Port 0 interrupt enable register (PRT0IE)
 PORT_0_INTCTRL_0:		equ 0h	;Port 0 interrupt control 0 register (PRT0IC0)
 PORT_0_INTCTRL_1:		equ 0h	;Port 0 interrupt control 1 register (PRT0IC1)
-PORT_1_GLOBAL_SELECT:	equ 0h	;Port 1 global select register (PRT1GS)
-PORT_1_DRIVE_0:			equ 3h	;Port 1 drive mode 0 register (PRT1DM0)
-PORT_1_DRIVE_1:			equ ffh	;Port 1 drive mode 1 register (PRT1DM1)
-PORT_1_DRIVE_2:			equ ffh	;Port 1 drive mode 2 register (PRT1DM2)
-PORT_1_INTENABLE:		equ 0h	;Port 1 interrupt enable register (PRT1IE)
+PORT_1_GLOBAL_SELECT:	equ 10h	;Port 1 global select register (PRT1GS)
+PORT_1_DRIVE_0:			equ b0h	;Port 1 drive mode 0 register (PRT1DM0)
+PORT_1_DRIVE_1:			equ eeh	;Port 1 drive mode 1 register (PRT1DM1)
+PORT_1_DRIVE_2:			equ eeh	;Port 1 drive mode 2 register (PRT1DM2)
+PORT_1_INTENABLE:		equ 1h	;Port 1 interrupt enable register (PRT1IE)
 PORT_1_INTCTRL_0:		equ 0h	;Port 1 interrupt control 0 register (PRT1IC0)
-PORT_1_INTCTRL_1:		equ 0h	;Port 1 interrupt control 1 register (PRT1IC1)
+PORT_1_INTCTRL_1:		equ 1h	;Port 1 interrupt control 1 register (PRT1IC1)
 PORT_2_GLOBAL_SELECT:	equ 0h	;Port 2 global select register (PRT2GS)
 PORT_2_DRIVE_0:			equ 7fh	;Port 2 drive mode 0 register (PRT2DM0)
 PORT_2_DRIVE_1:			equ 80h	;Port 2 drive mode 1 register (PRT2DM1)

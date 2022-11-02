@@ -8,6 +8,30 @@ dbfile lib/i2chw_temprsrcinits.asm
 dbfunc 0 ? 0 I
 dbfile PSoCAPI.inc
 dbfunc 0 ? 0 I
+dbfile Timer16_1.inc
+dbfunc 0 ? 0 I
+dbfile C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CYPRES~1/tools/include/CY8C28~1/m8c.inc
+dbfunc 0 ? 0 I
+dbfile ./lib/Timer16_1.inc
+dbfunc 0 ? 0 I
+dbfile PSoCAPI.inc
+dbfunc 0 ? 0 I
+dbfile PWM8_1.inc
+dbfunc 0 ? 0 I
+dbfile C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CYPRES~1/tools/include/CY8C28~1/m8c.inc
+dbfunc 0 ? 0 I
+dbfile ./lib/PWM8_1.inc
+dbfunc 0 ? 0 I
+dbfile PSoCAPI.inc
+dbfunc 0 ? 0 I
+dbfile ./lib/PGA_2.inc
+dbfunc 0 ? 0 I
+dbfile PSoCAPI.inc
+dbfunc 0 ? 0 I
+dbfile ./lib/PGA_1.inc
+dbfunc 0 ? 0 I
+dbfile PSoCAPI.inc
+dbfunc 0 ? 0 I
 dbfile LCD_2.inc
 dbfunc 0 ? 0 I
 dbfile C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CYPRES~1/tools/include/CY8C28~1/m8c.inc
@@ -21,6 +45,10 @@ dbfunc 0 ? 0 I
 dbfile PSoCAPI.inc
 dbfunc 0 ? 0 I
 dbfile ./lib/I2CHW_TempCommon.inc
+dbfunc 0 ? 0 I
+dbfile PSoCAPI.inc
+dbfunc 0 ? 0 I
+dbfile ./lib/DUALADC_1.inc
 dbfunc 0 ? 0 I
 dbfile PSoCAPI.inc
 dbfunc 0 ? 0 I

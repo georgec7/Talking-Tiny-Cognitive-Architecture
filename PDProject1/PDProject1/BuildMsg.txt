@@ -1,20 +1,64 @@
 Starting MAKE...
 creating project.mk -- no changes
 
-Linking..
+CAUTION lib/psocconfig.asm is older than PSoCConfig.xml or missing
 
-LMM info: area 'InterruptRAM' uses 12 bytes in SRAM bank 0
+CAUTION you may need to generate source in PSoC Designer
 
-LMM info: area 'virtual_registers' uses 7 bytes in SRAM page 0
+!W C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(117):[warning] [MISRA 2200]calling an undeclared function may cause unexpected behavior if the function 
 
-idata dump at output/PDProject1.idata
+takes or returns values other than int
 
-  ROM 17% full. 2687 out of 16384 bytes used (does not include absolute areas).
+!W C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(117):[warning] [MISRA 2714]calling a function without prototype may cause unexpected behavior if the function 
 
-  RAM 3% full. 19 bytes used (does not include stack usage).
+takes or returns values other than int
 
-Built with ICCM8C STD V7.05.00
+!E C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(149): unrecognized statement
+
+!E C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(149): syntax error; found `if' expecting `;'
+
+!E C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(153): unrecognized statement
+
+!E C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(153): syntax error; found `if' expecting `;'
+
+!E C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(157): unrecognized statement
+
+!E C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(157): syntax error; found `if' expecting `;'
+
+!E C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(161): unrecognized statement
+
+!E C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(161): syntax error; found `if' expecting `;'
+
+!E C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(165): unrecognized statement
+
+!E C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(165): syntax error; found `if' expecting `;'
+
+!E C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(169): unrecognized statement
+
+!E C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(169): syntax error; found `if' expecting `;'
+
+!E C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(175): unrecognized statement
+
+!E C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(175): syntax error; found `if' expecting `;'
+
+!W C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(241):[warning] declaration of `remove' does not match previous declaration at C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(117)
+
+!E C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(245): operands of + have illegal types `struct vocabTable' and `int'
+
+!E C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(245): type error: pointer expected
+
+!E C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(245): left operand of . has incompatible type `int'
+
+!E C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(247): operands of + have illegal types `struct vocabTable' and `int'
+
+!E C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(247): type error: pointer expected
+
+!E C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(247): illegal expression
+
+!E C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(247): too many errors
+
+make: *** [obj/main.o] Error 1
 
  
-PDProject1 - 0 error(s) 0 warning(s) 18:41:44
+PDProject1 - 22 error(s) 3 warning(s) 18:34:57
 

@@ -14,6 +14,11 @@
 ; =============================================================================
  
 include "PSoCGPIOINT.inc"
+include "DUALADC_1.inc"
 include "I2CHW_TempCommon.inc"
 include "I2CHW_TempMstr.inc"
 include "LCD_2.inc"
+include "PGA_1.inc"
+include "PGA_2.inc"
+include "PWM8_1.inc"
+include "Timer16_1.inc"
