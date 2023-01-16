@@ -19,7 +19,7 @@ include "m8c.inc"
 
 PWM8_1_CONTROL_REG_START_BIT:              equ 0x01    ; Control register start bit
 PWM8_1_INT_REG:                            equ 0x0e1
-PWM8_1_INT_MASK:                           equ 0x10
+PWM8_1_INT_MASK:                           equ 0x20
 
 
 ;--------------------------------------------------
@@ -34,13 +34,13 @@ PWM8_1_PULSE_WIDTH:                        equ 0x32
 ; Register Address Constants for PWM8_1
 ;--------------------------------------------------
 
-PWM8_1_COUNTER_REG:                    equ 0x30   ; DR0 Count register
-PWM8_1_PERIOD_REG:                     equ 0x31   ; DR1 Period register
-PWM8_1_COMPARE_REG:                    equ 0x32   ; DR2 Compare register
-PWM8_1_CONTROL_REG:                    equ 0x33   ; Control register
-PWM8_1_FUNC_REG:                       equ 0x30   ; Function register
-PWM8_1_INPUT_REG:                      equ 0x31   ; Input register
-PWM8_1_OUTPUT_REG:                     equ 0x32   ; Output register
+PWM8_1_COUNTER_REG:                    equ 0x34   ; DR0 Count register
+PWM8_1_PERIOD_REG:                     equ 0x35   ; DR1 Period register
+PWM8_1_COMPARE_REG:                    equ 0x36   ; DR2 Compare register
+PWM8_1_CONTROL_REG:                    equ 0x37   ; Control register
+PWM8_1_FUNC_REG:                       equ 0x34   ; Function register
+PWM8_1_INPUT_REG:                      equ 0x35   ; Input register
+PWM8_1_OUTPUT_REG:                     equ 0x36   ; Output register
 
 
 ;--------------------------------------------------

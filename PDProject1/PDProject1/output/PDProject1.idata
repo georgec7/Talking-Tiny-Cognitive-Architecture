@@ -1,5 +1,5 @@
-flash 1AAC SRAM   14:
- 00 120 bytes
-flash 1AB0 SRAM   93:
- <size at next line>   0
-  [size:] 1 bytes
+flash 2690 SRAM   14:
+ 00 160 bytes
+flash 2694 SRAM   BB:
+ <size at next line>   0  A  2 9A  1 4D  0 17  0  0  0
+  [size:] 11 bytes

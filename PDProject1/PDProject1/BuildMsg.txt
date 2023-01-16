@@ -1,64 +1,112 @@
 Starting MAKE...
 creating project.mk -- no changes
 
-CAUTION lib/psocconfig.asm is older than PSoCConfig.xml or missing
-
-CAUTION you may need to generate source in PSoC Designer
-
-!W C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(117):[warning] [MISRA 2200]calling an undeclared function may cause unexpected behavior if the function 
+!W C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(197):[warning] [MISRA 2200]calling an undeclared function may cause unexpected behavior if the function 
 
 takes or returns values other than int
 
-!W C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(117):[warning] [MISRA 2714]calling a function without prototype may cause unexpected behavior if the function 
+!W C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(197):[warning] [MISRA 2714]calling a function without prototype may cause unexpected behavior if the function 
 
 takes or returns values other than int
 
-!E C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(149): unrecognized statement
+!W C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(450):[warning] overflow in converting constant expression from `long int' to `unsigned int'
 
-!E C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(149): syntax error; found `if' expecting `;'
+!W C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(450):[warning] overflow in converting constant expression from `unsigned int' to `unsigned char'
 
-!E C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(153): unrecognized statement
+!W C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(452):[warning] overflow in converting constant expression from `long int' to `unsigned int'
 
-!E C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(153): syntax error; found `if' expecting `;'
+!W C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(452):[warning] overflow in converting constant expression from `unsigned int' to `unsigned char'
 
-!E C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(157): unrecognized statement
+!W C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(454):[warning] overflow in converting constant expression from `long int' to `unsigned int'
 
-!E C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(157): syntax error; found `if' expecting `;'
+!W C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(454):[warning] overflow in converting constant expression from `unsigned int' to `unsigned char'
 
-!E C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(161): unrecognized statement
+!W C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(456):[warning] overflow in converting constant expression from `long int' to `unsigned int'
 
-!E C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(161): syntax error; found `if' expecting `;'
+!W C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(456):[warning] overflow in converting constant expression from `unsigned int' to `unsigned char'
 
-!E C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(165): unrecognized statement
+!W C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(458):[warning] overflow in converting constant expression from `long int' to `unsigned int'
 
-!E C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(165): syntax error; found `if' expecting `;'
+!W C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(458):[warning] overflow in converting constant expression from `unsigned int' to `unsigned char'
 
-!E C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(169): unrecognized statement
+!W C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(460):[warning] overflow in converting constant expression from `long int' to `unsigned int'
 
-!E C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(169): syntax error; found `if' expecting `;'
+!W C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(460):[warning] overflow in converting constant expression from `unsigned int' to `unsigned char'
 
-!E C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(175): unrecognized statement
+!W C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(462):[warning] overflow in converting constant expression from `long int' to `unsigned int'
 
-!E C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(175): syntax error; found `if' expecting `;'
+!W C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(462):[warning] overflow in converting constant expression from `unsigned int' to `unsigned char'
 
-!W C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(241):[warning] declaration of `remove' does not match previous declaration at C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(117)
+!W C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(470):[warning] overflow in converting constant expression from `long int' to `unsigned int'
 
-!E C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(245): operands of + have illegal types `struct vocabTable' and `int'
+!W C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(470):[warning] overflow in converting constant expression from `unsigned int' to `unsigned char'
 
-!E C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(245): type error: pointer expected
+!W C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(472):[warning] overflow in converting constant expression from `long int' to `unsigned int'
 
-!E C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(245): left operand of . has incompatible type `int'
+!W C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(472):[warning] overflow in converting constant expression from `unsigned int' to `unsigned char'
 
-!E C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(247): operands of + have illegal types `struct vocabTable' and `int'
+!W C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(474):[warning] overflow in converting constant expression from `long int' to `unsigned int'
 
-!E C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(247): type error: pointer expected
+!W C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(474):[warning] overflow in converting constant expression from `unsigned int' to `unsigned char'
 
-!E C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(247): illegal expression
+!W C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(476):[warning] overflow in converting constant expression from `long int' to `unsigned int'
 
-!E C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(247): too many errors
+!W C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(476):[warning] overflow in converting constant expression from `unsigned int' to `unsigned char'
 
-make: *** [obj/main.o] Error 1
+!W C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(478):[warning] overflow in converting constant expression from `long int' to `unsigned int'
+
+!W C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(478):[warning] overflow in converting constant expression from `unsigned int' to `unsigned char'
+
+!W C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(480):[warning] overflow in converting constant expression from `long int' to `unsigned int'
+
+!W C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(480):[warning] overflow in converting constant expression from `unsigned int' to `unsigned char'
+
+!W C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(482):[warning] overflow in converting constant expression from `long int' to `unsigned int'
+
+!W C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(482):[warning] overflow in converting constant expression from `unsigned int' to `unsigned char'
+
+!W C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(484):[warning] overflow in converting constant expression from `long int' to `unsigned int'
+
+!W C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(484):[warning] overflow in converting constant expression from `unsigned int' to `unsigned char'
+
+!W C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(601):[warning] [MISRA 2712]old-style function definition for `re_learn_ranges'
+
+!W C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(601):[warning] declaration of `re_learn_ranges' does not match previous declaration at C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(197)
+
+!W C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(632):[warning] expression with no effect elided
+
+!W C:\Users\georg\OneDrive\DOCUME~1\GitHub\TALKIN~1\PDPROJ~1\PDPROJ~1\main.c(644):[warning] expression with no effect elided
+
+Linking..
+
+LMM info: area 'InterruptRAM' uses 20 bytes in SRAM bank 0
+
+LMM info: area 'data' item of 80 bytes allocated in SRAM page 0
+
+LMM info: area 'data' item of 80 bytes allocated in SRAM page 0
+
+LMM info: area 'virtual_registers' uses 7 bytes in SRAM page 0
+
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 0
+
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 0
+
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 0
+
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 0
+
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 0
+
+LMM info: area 'data' item of 1 bytes allocated in SRAM page 0
+
+idata dump at output/PDProject1.idata
+
+  ROM 58% full. 9472 out of 16384 bytes used (does not include absolute areas).
+
+  RAM 26% full. 198 bytes used (does not include stack usage).
+
+Built with ICCM8C STD V7.05.00
 
  
-PDProject1 - 22 error(s) 3 warning(s) 18:34:57
+PDProject1 - 0 error(s) 36 warning(s) 16:09:29
 
